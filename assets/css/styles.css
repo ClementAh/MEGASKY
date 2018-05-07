@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.logo {
+    width: 122px;
+    height: 30px;
+}
+
+.btn.btn-primary{
+    color:white;
+    background-color: #FD4A4A;
+    font-weight: bold;
+    border-color:transparent;
+    border-radius:0px;
+    height: 40px;
+    width: 133px;
+
+}
+
+.navlink a {
+    color: #000000;
+
+
+}
+
+.navbar ul {
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item a:first-child {
+    text-align : center;
+}
+
+.navbar ul li a {
+    font-size: 12px;
+    font-style: normal;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+
+.button-primary{
+    background-color: #FD4A4A;
+    width: 133px;
+    height: 31px;
+    text-align: center;
+    color: #FAFAFA;
+
+
+}
+
+.card {
+    display: inline-block;
+    float: left;
+    margin : 73px 73px 73px 112px;
+    padding: 0;
+
+}
+
+.categorie {
+    background-color: #FD4A4A;
+    height: 46px;
+}
+
+.categorie p {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding-top: 7px;
+}
+
+/*.card2 {*/
+/*display: inline-block;*/
+/*float: left;*/
+/*margin : 76px 76px 76px 119px;*/
+/*padding: 0;*/
+/*}*/
+
+.carousel-inner {
+    background-color: #FAFAFA;
+}
+
+.Banda {
+    background-color: #EDEDED;
+}
+
+.spotlight {
+    background-color: #FD4A4A;
+    height: 126px;
+
+}
+
+.link {
+    margin-top: 47px;
+    margin-bottom: 31px;
+    width: 520px;
+    height: 48px;
+
+}
+
+.link2 {
+    font-style: italic;
+    font-size: 36px;
+    font-family: 'Roboto', sans-serif;
+    color: #FAFAFA;
+    font-weight: bold;
+
+}
+
+.SpotButton.btn-primary{
+    width: 205px;
+    height: 51px;
+    background-color:#D23737;
+    margin: 44px 62px 31px 50px;
+    color:white !important;
+    font-weight: bold;
+    font-size: 24px;
+
+
+}
+
+.sectionContact {
+    background-color: #EDEDED;
+}
+.contact {
+    width: 525px;
+    height: 575px;
+}
+
+.imgContact {
+    margin: 85px 0 0 38px;
+}
+.logoSky {
+    width: 159px;
+    height:76px ;
+    margin-left: 88px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.form {
+    width: 362px;
+    height: 511px;
+    padding: 20px;
+    margin: 90px 47px 56px 133px;
+    background-color: #FAFAFA;
+    border-radius: 15px;
+    -webkit-box-shadow: -1px 1px 14px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 1px 14px 0px rgba(0,0,0,0.75);
+    box-shadow: -1px 1px 14px 0px rgba(0,0,0,0.75);
+
+}
+
+.form-group input {
+    background-color: #EDEDED;
+    margin: 28px 0 25px 0;
+}
+
+.form-group select {
+    background-color: #EDEDED;
+
+}
+
+.form-group textarea {
+    background-color: #EDEDED;
+}
+
+.footer {
+    background-color: #FD4A4A;
+    height: 73px;
+}
+
+.imgfooter {
+    width: 149px;
+    height: 36px;
+    margin : 19px;
+}
+
+.canais {
+    width: 69px;
+    height: 31px;
+    background-color: #FAFAFA;
+    border-radius: 10px;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.canais span {
+    color: #FD4A4A;
+    font-size: 12px;
+}
+
+.canais p {
+    font-family :'Roboto', sans-serif;
+    font-style: normal;
+    font-size: 7px;
+    line-height: 8px;
+
+}
+
+.description {
+    background-color: #EDEDED;
+}
+
+.price span {
+    color: #FD4A4A;
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+
+}
+
+.titleCat p {
+    color: #FD4A4A;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    padding: 5px;
+
+}
+
+.titleCat {
+    background-color: #F1F1F1;
+    height: 46px;
+}
+
+.empty {
+    background-color: #DFDFDF;
+}
+
+.btn1{
+    background-color: #E3E3E3;
+    height: 28px;
+    width: 144px;
+    color: #646464;
+    text-align: center;
+
+}
+
+.btn1 a {
+    text-decoration: none;
+}
+
+.btn2{
+    background-color: #FD4A4A;
+    height: 28px;
+    width: 144px;
+    color: white;
+    text-align: center;
+}
