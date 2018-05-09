@@ -7,14 +7,12 @@
 
 .btn.btn-primary{
     color:white;
-    background-color: #FD4A4A;
+    background-color:#FD4A4A;
     font-weight: bold;
     border-color:transparent;
     border-radius:0px;
     height: 40px;
     width: 144px;
-
-
 }
 
 .linkNav ul {
@@ -31,23 +29,16 @@
     text-decoration: none;
 }
 
-.navlink a {
-    color: #000000;
-
-
-}
-
 .navbar ul {
     padding: 0;
     margin: 0;
 }
 
-.navbar ul li {
 
+.navlink {
+    margin-left: 400px;
 }
-.nav-item a:first-child {
-    text-align : center;
-}
+
 
 .navbar ul li a {
     font-size: 12px;
