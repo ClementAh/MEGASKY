@@ -7,31 +7,34 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <title>MegaSky</title>
+    <title>MEGASKY</title>
+    <link rel="shortcut icon" href="./assets/img/megasky.ico">
+
 </head>
 <body>
 
 <!-- Navbar -->
 
+
 <nav class="navbar navbar fixed-top navbar-expand-lg navbar-light bg-light">
-    <img class="logo" src="./assets/img/megasky.png">
+   <a href="index.php"><img class="logo" src="./assets/img/megasky.png"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="navlink navbar collapse navbar-collapse">
         <ul class="navbar-nav">
             <li class="nav-item ">
-                <a class="nav-link" href="#">BANDA LARGA</a>
+                <a class="nav-link" href="./pages/banda_larga.php">BANDA LARGA</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">SKY PRE PAGO</a>
+                <a class="nav-link" href="./pages/pre_pago.php">SKY PRE PAGO</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">SKY POS PAGO</a>
+                <a class="nav-link" href="./pages/pos_pago.php">SKY POS PAGO</a>
             </li>
         </ul>
 
-        <a class="btn btn-primary" href="#"> ASSINE JA</a>
+        <a class="btn btn-primary" href="#" >ASSINE JA</a>
     </div>
 </nav>
 
@@ -66,7 +69,7 @@
     </a>
 </div>
 
-</div>
+
 
 
 <!-- Slider TV -->
@@ -82,27 +85,25 @@
     <!-- First slide -->
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 20rem;">
                 <div class="categorie">
                     <p>SMART</p>
                 </div>
                 <img class="card-img-top" src="./assets/img/hunger.jpg" alt="Card image cap">
-                <div class="description container">
+                <div class="description container-fluid">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="container">
+                            <div class="container-fluid">
                                 <div class="row">
                                     <div class="canais col-md-3">
-                                        <p><span>103</span></p>
-                                        <p>Canais</p>
+                                        <p><span>103</span> CANAIS</p>
+
                                     </div>
                                     <div class="canais col-md-3">
-                                        <p><span>0</span></p>
-                                        <p>Canais</p>
+                                        <p><span>0</span><br>CANAIS HD</p>
                                     </div>
                                     <div class="canais col-md-3">
-                                        <p><span>1</span></p>
-                                        <p>Equipamento</p>
+                                        <p><span>1</span> EQUIPAMENTO</p>
                                     </div>
                                 </div>
                             </div>
@@ -113,100 +114,264 @@
                 </div>
 
                 <div class="price">
-                    <p><span>R$32,45</span></p>
-                    <p>NO PRIMERO MES</p>
+                    <span>R$ 32,45</span> <p>NO PRIMERO MES</p>
                 </div>
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="btn1 col-md-6">
-                            <a class=" btn-primary" href="#">DETALHES</a>
+                        <div class="col-md-6">
+                            <a class="button btn btn-primary" href="#">DETALHES</a>
                         </div>
-                        <div class="btn2 col-md-6">
-                            <a class=" btn-primary" href="#">ASSINAR</a>
+                        <div class="col-md-6">
+                            <a class="btn btn-primary" href="#">ASSINAR</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
+
+            <div class="card" style="width: 20rem;">
+                <div class="categorie">
+                    <p>SMART HD</p>
+                </div>
+                <img class="card-img-top" src="./assets/img/spider.jpg" alt="Card image cap">
+                <div class="description container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="canais col-md-3">
+                                        <p><span>103</span> CANAIS</p>
+
+                                    </div>
+                                    <div class="canais col-md-3">
+                                        <p><span>0</span><br> CANAIS HD</p>
+                                    </div>
+                                    <div class="canais col-md-3">
+                                        <p><span>1</span> EQUIPAMENTO</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="price">
+                    <span>R$ 32,45</span> <p>NO PRIMERO MES</p>
+                </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a class="button btn btn-primary" href="#">DETALHES</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a class="btn btn-primary" href="#">ASSINAR</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="card" style="width: 20rem;">
+                <div class="categorie">
+                    <p>SMART II HD</p>
+                </div>
+                <img class="card-img-top" src="./assets/img/hunger.jpg" alt="Card image cap">
+                <div class="description container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="canais col-md-3">
+                                        <p><span>103</span> CANAIS</p>
+
+                                    </div>
+                                    <div class="canais col-md-3">
+                                        <p><span>0</span><br> CANAIS HD</p>
+                                    </div>
+                                    <div class="canais col-md-3">
+                                        <p><span>1</span> EQUIPAMENTO</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="price">
+                    <span>R$ 32,45</span> <p>NO PRIMERO MES</p>
+                </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a class="button btn btn-primary" href="#">DETALHES</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a class="btn btn-primary" href="#">ASSINAR</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- Second slide -->
+
+        <div class="carousel-item">
+            <div class="carousel-item active">
+                <div class="card" style="width: 20rem;">
+                    <div class="categorie">
+                        <p>SMART</p>
+                    </div>
+                    <img class="card-img-top" src="./assets/img/hunger.jpg" alt="Card image cap">
+                    <div class="description container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="canais col-md-3">
+                                            <p><span>103</span> CANAIS</p>
+
+                                        </div>
+                                        <div class="canais col-md-3">
+                                            <p><span>0</span><br> CANAIS HD</p>
+                                        </div>
+                                        <div class="canais col-md-3">
+                                            <p><span>1</span> EQUIPAMENTO</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="price">
+                        <span>R$ 32,45</span> <p>NO PRIMERO MES</p>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a class="button btn btn-primary" href="#">DETALHES</a>
+                            </div>
+                            <div class="col-md-6">
+                                <a class="btn btn-primary" href="#">ASSINAR</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="card" style="width: 20rem;">
+                    <div class="categorie">
+                        <p>SMART HD</p>
+                    </div>
+                    <img class="card-img-top" src="./assets/img/spider.jpg" alt="Card image cap">
+                    <div class="description container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="canais col-md-3">
+                                            <p><span>103</span> CANAIS</p>
+
+                                        </div>
+                                        <div class="canais col-md-3">
+                                            <p><span>0</span><br> CANAIS HD</p>
+                                        </div>
+                                        <div class="canais col-md-3">
+                                            <p><span>1</span> EQUIPAMENTO</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="price">
+                        <span>R$ 32,45</span> <p>NO PRIMERO MES</p>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a class="button btn btn-primary" href="#">DETALHES</a>
+                            </div>
+                            <div class="col-md-6">
+                                <a class="btn btn-primary" href="#">ASSINAR</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="card" style="width: 20rem;">
+                    <div class="categorie">
+                        <p>SMART II HD</p>
+                    </div>
+                    <img class="card-img-top" src="./assets/img/hunger.jpg" alt="Card image cap">
+                    <div class="description container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="canais col-md-3">
+                                            <p><span>103</span> ANAIS</p>
+
+                                        </div>
+                                        <div class="canais col-md-3">
+                                            <p><span>0</span><br>CANAIS HD</p>
+                                        </div>
+                                        <div class="canais col-md-3">
+                                            <p><span>1</span> EQUIPAMENTO</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="price">
+                        <span>R$ 32,45</span> <p>NO PRIMERO MES</p>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a class="button btn btn-primary" href="#">DETALHES</a>
+                            </div>
+                            <div class="col-md-6">
+                                <a class="btn btn-primary" href="#">ASSINAR</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
         </div>
-        <div class="card" style="width: 18rem;">
-
-            <div class="categorie">
-                <p>SMART HD</p>
-            </div>
-            <img class="card-img-top" src="./assets/img/spider.jpg" alt="Card image cap">
-            <div class="card-body">
-
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <div class="categorie">
-                <p>SMART II HD</p>
-            </div>
-            <img class="card-img-top" src="./assets/img/hunger.jpg" alt="Card image cap">
-            <div class="card-body">
-
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
     </div>
-
-
-    <!-- Second slide -->
-
-    <div class="carousel-item">
-        <div class="carousel-item active">
-            <div class="card" style="width: 18rem;">
-                <div class="categorie">
-                    <p>SMART II HD</p>
-                </div>
-                <img class="card-img-top" src="./assets/img/hunger.jpg" alt="Card image cap">
-                <div class="card-body">
-
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <div class="categorie">
-                    <p>SMART II HD</p>
-                </div>
-                <img class="card-img-top" src="./assets/img/spider.jpg" alt="Card image cap">
-                <div class="card-body">
-
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <div class="categorie">
-                    <p>SMART II HD</p>
-                </div>
-                <img class="card-img-top" src="./assets/img/hunger.jpg" alt="Card image cap">
-                <div class="card-body">
-
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <!--        <a class="carousel-control-prev" href="#TvExampleIndicators" role="button" data-slide="prev">-->
-    <!--            <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
-    <!--            <span class="sr-only">Previous</span>-->
-    <!--        </a>-->
-    <!--        <a class="carousel-control-next" href="#TvExampleIndicators" role="button" data-slide="next" style="color: #FD4A4A">-->
-    <!--            <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
-    <!--            <span class="sr-only">Next</span>-->
-    <!--        </a>-->
+    <a class="carousel-control-prev" href="#TvExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#TvExampleIndicators" role="button" data-slide="next" style="color: #FD4A4A">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
 </div>
-</div>
+
 
 
 
@@ -223,94 +388,214 @@
     <!-- First slide -->
     <div class="Banda carousel-inner">
         <div class="carousel-item active">
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 20rem;">
                 <div class="titleCat">
                     <p>Light + WI-FI</p>
                 </div>
 
-                <div class="card-body">
+                <div class="card-body col-md-12">
+                    <div class="container">
+                        <div class="row">
+                            <div class="spotPrice col-md-12">
+                                <p>A partir de</p><span class="price2">R$ 39,90</span><span class="afterPrince">/mês</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="condition col-md-12">
+                                <p>PLANO DE 1 MEGA COM VELOCIDADE EM DOBRO</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="container-full">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a class="button btn btn-primary" href="#">DETALHES</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="#" class="btn btn-primary">ASSINA</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="card" style="width: 18rem;">
 
-                <div class="titleCat">
-                    <p>4 MEGA + WI-FI</p>
-                </div>
 
-                <div class="card-body">
-
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-
+            <div class="card" style="width: 20rem;">
                 <div class="titleCat">
                     <p>2 MEGA + WI-FI</p>
                 </div>
 
-                <div class="card-body">
+                <div class="card-body col-md-12">
+                    <div class="container">
+                        <div class="row">
+                            <div class="spotPrice col-md-12">
+                                <p>A partir de</p><span class="price2">R$ 49,90</span><span class="afterPrince">/mês</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="condition col-md-12">
+                                <p>TENHA INTERNET EM CASA PARA TODA A FAMILIA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="container-full">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a class="button btn btn-primary" href="#">DETALHES</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="#" class="btn btn-primary">ASSINA</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+            <div class="card" style="width: 20rem;">
+                <div class="titleCat">
+                    <p>4 MEGA + WI-FI</p>
+                </div>
 
+                <div class="card-body col-md-12">
+                    <div class="container">
+                        <div class="row">
+                            <div class="spotPrice col-md-12">
+                                <p>A partir de</p><span class="price2">R$ 74,90</span><span class="afterPrince">/mês</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="condition col-md-12">
+                                <p>MUITA VELOCIDADE PARA VOCÊ CURTIR O MELHOR DA INTERNET</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-full">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a class="button btn btn-primary" href="#">DETALHES</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="#" class="btn btn-primary">ASSINA</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
 
         <!-- Second slide -->
 
         <div class="carousel-item">
-            <div class="carousel-item active">
-                <div class="card" style="width: 18rem;">
-                    <div class="titleCat">
-                        <p>Light + WI-FI</p>
-                    </div>
+            <div class="card" style="width: 20rem;">
+                <div class="titleCat">
+                    <p>LIGHT + WI-FI</p>
+                </div>
 
-                    <div class="card-body">
-                        
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="card-body col-md-12">
+                    <div class="container">
+                        <div class="row">
+                            <div class="spotPrice col-md-12">
+                                <p>A partir de</p><span class="price2">R$ 39,90</span><span class="afterPrince">/mês</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="condition col-md-12">
+                                <p>PLANO DE 1 MEGA COM VELOCIDADE EM DOBRO</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="card" style="width: 18rem;">
-                    <div class="titleCat">
-                        <p>Light + WI-FI</p>
-                    </div>
 
-                    <div class="card-body">
-
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="card" style="width: 18rem;">
-                    <div class="titleCat">
-                        <p>Light + WI-FI</p>
-                    </div>
-
-                    <div class="card-body">
-
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="container-full">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a class="button btn btn-primary" href="#">DETALHES</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="#" class="btn btn-primary">ASSINA</a>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="card" style="width: 20rem;">
+                <div class="titleCat">
+                    <p>2 MEGA + WI-FI</p>
+                </div>
 
+                <div class="card-body col-md-12">
+                    <div class="container">
+                        <div class="row">
+                            <div class="spotPrice col-md-12">
+                                <p>A partir de</p><span class="price2">R$ 49,90</span><span class="afterPrince">/mês</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="condition col-md-12">
+                                <p>TENHA INTERNET EM CASA PARA TODA A FAMILIA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-full">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a class="button btn btn-primary" href="#">DETALHES</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="#" class="btn btn-primary">ASSINA</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="width: 20rem;">
+                <div class="titleCat">
+                    <p>4 MEGA + WI-FI</p>
+                </div>
+
+                <div class="card-body col-md-12">
+                    <div class="container">
+                        <div class="row">
+                            <div class="spotPrice col-md-12">
+                                <p>A partir de</p><span class="price2">R$ 74,90</span><span class="afterPrince">/mês</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="condition col-md-12">
+                                <p>MUITA VELOCIDADE PARA VOCÊ CURTIR O MELHOR DA INTERNET</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-full">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a class="button btn btn-primary" href="#">DETALHES</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="#" class="btn btn-primary">ASSINA</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <a class="carousel-control-prev" href="#BandaExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        </a>
-        <a class="carousel-control-next" href="#BandaExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-</div>
 
+
+    </div>
+
+    <a class="carousel-control-prev" href="#BandaExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </a>
+    <a class="carousel-control-next" href="#BandaExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
 
 
 <div class="spotlight container-fluid">
@@ -322,7 +607,7 @@
             <div class="container">
                 <div class="row">
                     <div class="link col-md-12">
-                        <a class="link2" href="#">SKY HD + BANDA LARGA</a>
+                        <a href="#">SKY HD + BANDA LARGA</a>
                     </div>
                 </div>
             </div>
@@ -393,8 +678,33 @@
         <div class="logo col-md-3">
             <img class="imgfooter" src="./assets/img/megaFooter.png">
         </div>
-    </div>
+        <div class="linkFooter col-md-6">
+            <ul>
+                <li>
+                    <a href="">INCIO</a>
+                </li>
+                <li>
+                    <a href="">SOBRE</a>
+                </li>
+                <li>
+                    <a href="./pages/banda_larga.php">BANDA LARGA</a>
+                </li>
+                <li>
+                    <a href="./pages/pre_pago.php">SKY PRE PAGO</a>
+                </li>
+                <li>
+                    <a href="./pages/pos_pago.php">SKY POS PAGO</a>
+                </li>
+                <li>
+                    <a href="">CONTATO</a>
+                </li>
+            </ul>
 
+        </div>
+        <div class="number col-md-3">
+            <p>62 000 000</p>
+        </div>
+    </div>
 </div>
 
 

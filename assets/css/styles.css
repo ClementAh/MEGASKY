@@ -12,8 +12,23 @@
     border-color:transparent;
     border-radius:0px;
     height: 40px;
-    width: 133px;
+    width: 144px;
 
+
+}
+
+.linkNav ul {
+    padding: 0;
+    margin: 0;
+}
+
+.linkNav ul li {
+    display: inline-block;
+    text-align: center;
+}
+
+.linkNav ul li a {
+    text-decoration: none;
 }
 
 .navlink a {
@@ -27,6 +42,9 @@
     margin: 0;
 }
 
+.navbar ul li {
+
+}
 .nav-item a:first-child {
     text-align : center;
 }
@@ -91,21 +109,27 @@
 }
 
 .link {
-    margin-top: 47px;
+    margin-top: 40px;
     margin-bottom: 31px;
     width: 520px;
     height: 48px;
 
 }
 
-.link2 {
+.link a {
     font-style: italic;
-    font-size: 36px;
+    font-size: 37px;
     font-family: 'Roboto', sans-serif;
     color: #FAFAFA;
     font-weight: bold;
-
+    text-decoration: none;
 }
+
+.link a:hover {
+    text-decoration: none;
+    color: #F2F2F2;
+}
+
 
 .SpotButton.btn-primary{
     width: 205px;
@@ -177,24 +201,27 @@
 }
 
 .canais {
-    width: 69px;
-    height: 31px;
+
     background-color: #FAFAFA;
     border-radius: 10px;
-    margin-left: 15px;
-    margin-top: 10px;
+    margin: 10px ;
+    height: 45px;
+
 }
+
 
 .canais span {
     color: #FD4A4A;
-    font-size: 12px;
+    font-size: 22px;
+    font-weight: bold;
 }
 
 .canais p {
     font-family :'Roboto', sans-serif;
     font-style: normal;
     font-size: 7px;
-    line-height: 8px;
+    text-align: center;
+    color: #9B9B9B;
 
 }
 
@@ -203,19 +230,49 @@
 }
 
 .price span {
+    font-weight: bold;
     color: #FD4A4A;
     font-size: 50px;
     font-family: 'Roboto', sans-serif;
-    text-align: center;
+    margin-left: 58px;
+    font-style: italic;
 
 }
+.price p {
+    text-align: center;
+}
 
+.spotPrice p {
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+.condition p {
+    color: #ADAAAA;
+    font-family: 'Roboto', sans-serif;
+}
+
+.price2 {
+    font-size: 50px;
+    color: #FD4A4A;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    padding: 0;
+    font-style: italic;
+    margin-left: 8px;
+}
+
+.afterPrince {
+    color : #ADAAAA;
+    font-family: 'Roboto', sans-serif;
+}
 .titleCat p {
     color: #FD4A4A;
     font-size: 20px;
     text-align: center;
     font-family: 'Roboto', sans-serif;
     padding: 5px;
+    font-weight: bold;
 
 }
 
@@ -228,23 +285,47 @@
     background-color: #DFDFDF;
 }
 
-.btn1{
+.button.btn.btn-primary{
     background-color: #E3E3E3;
-    height: 28px;
-    width: 144px;
+    height: 40px;
+    width: 164px;
+    margin: 0;
+
     color: #646464;
-    text-align: center;
 
 }
 
-.btn1 a {
+.linkFooter ul {
+    padding: 0;
+    margin: 0;
+}
+.linkFooter ul li {
+    font-size:  12px;
+    font-family:'Roboto', sans-serif;
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 35px;
+    margin-top: 25px;
+;
+}
+
+.linkFooter a{
+
+    color: #F2F2F2;
     text-decoration: none;
 }
 
-.btn2{
-    background-color: #FD4A4A;
-    height: 28px;
-    width: 144px;
-    color: white;
+.number {
+    font-size: 36px;
+    font-family: 'Roboto', sans-serif;
+    color: #F2F2F2;
+    font-weight: bold;
+    font-style: italic;
     text-align: center;
+
+
+}
+
+.number p {
+    margin-top: 12px;
 }
