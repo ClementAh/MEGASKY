@@ -9,13 +9,13 @@
     <div class="navlink navbar collapse navbar-collapse">
         <ul class="navbar-nav">
             <li class="nav-item ">
-                <a class="nav-link" href="../pages/banda_larga.php">BANDA LARGA</a>
+                <a class="nav-link" href="./pages/banda_larga.php">BANDA LARGA</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../pages/pre_pago.php">SKY PRE PAGO</a>
+                <a class="nav-link" href="./pages/pre_pago.php">SKY PRE PAGO</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../pages/pos_pago.php">SKY POS PAGO</a>
+                <a class="nav-link" href="./pages/pos_pago.php">SKY POS PAGO</a>
             </li>
         </ul>
 
@@ -23,4 +23,5 @@
 
 
     </div>
-</nav>
+</nav>+
+.0

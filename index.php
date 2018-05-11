@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/normalize.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <title>MEGASKY</title>
     <link rel="shortcut icon" href="./assets/img/megasky.ico">
@@ -13,19 +14,19 @@
 </head>
 <body>
 
-<?php include "./pages/header.php "?>;
+<?php include "./pages/header.php "?>
 
-<?php include "./pages/slider.php"?>;
+<?php include "./pages/slider.php"?>
 
-<?php include "./pages/slider_tv.php "?>;
+<?php include "./pages/slider_tv.php "?>
 
-<?php include "./pages/slider_banda_larga.php "?>;
+<?php include "./pages/slider_banda_larga.php "?>
 
-<?php include "./pages/banner.php "?>;
+<?php include "./pages/banner.php "?>
 
-<?php include "./pages/contact_section.php"?>;
+<?php include "./pages/contact_section.php"?>
 
-<?php include "./pages/footer.php "?>;
+<?php include "./pages/footer.php "?>
 
 
 
