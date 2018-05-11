@@ -19,9 +19,8 @@
             </li>
         </ul>
 
-        <a class="btn btn-primary" data-toggle="modal" data-target="#formAssine">ASSINE JA</a>
+        <a class="btn btn-primary" data-toggle="modal" data-target="#formAssine" style ="color: white">ASSINE JA</a>
 
 
     </div>
-</nav>+
-.0
+</nav>
