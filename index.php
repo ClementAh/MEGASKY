@@ -43,6 +43,7 @@
 
 
 
+
 <!-- Modal -->
 <div class="modal fade" id="formAssine" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -54,7 +55,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form method="post">
+                <form method="post" action="./pages/form_contact.php">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Nome" name="name">
                     </div>
@@ -65,7 +66,7 @@
                         <input type="text" class="form-control" placeholder="Telephone" name="telephone">
                     </div>
                     <div class="form-group">
-                        <select class="form-control" id="exampleFormControlSelect1">
+                        <select class="form-control" id="exampleFormControlSelect1" name="categories">
                             <option>BANDA LARGA</option>
                             <option>PRE PAGO</option>
                             <option>POS PAGO</option>
@@ -74,20 +75,21 @@
                     </div>
                     <div class="form-group">
 
-                        <textarea class="form-control" placeholder="Message" rows="5"></textarea>
+                        <textarea class="form-control" name="message" placeholder="Message" rows="5"></textarea>
                     </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" name="assine" class="btn btn-primary">ASSINE</button>
+                    </div>
+
                 </form>
-
-
             </div>
         </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">ASSINE</button>
-        </div>
+
     </div>
 </div>
 
+<?include "./pages/form_contact.php"?>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>

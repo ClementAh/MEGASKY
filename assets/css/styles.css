@@ -13,6 +13,7 @@
     border-radius:0px;
     height: 40px;
     width: 144px;
+    margin : 0;
 }
 
 .linkNav ul {
@@ -280,11 +281,20 @@
     background-color: #E3E3E3;
     height: 40px;
     width: 164px;
-    margin: 0;
+
 
     color: #646464;
 
 }
+
+#BandaExampleIndicators ol li {
+    margin-left: 10px;
+}
+
+#TvExampleIndicators ol li {
+    margin-left: 10px;
+}
+
 
 .linkFooter ul {
     padding: 0;
@@ -296,7 +306,7 @@
     font-weight: bold;
     display: inline-block;
     margin-left: 35px;
-    margin-top: 25px;
+    margin-top: 27px;
 ;
 }
 
@@ -306,15 +316,17 @@
     text-decoration: none;
 }
 
+
 .number {
     font-size: 36px;
     font-family: 'Roboto', sans-serif;
     color: #F2F2F2;
     font-weight: bold;
     font-style: italic;
-    text-align: center;
+}
 
-
+.footer {
+    height: 80px;
 }
 
 .number p {
