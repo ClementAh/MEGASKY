@@ -7,25 +7,53 @@
         <li data-target="#BandaExampleIndicators" data-slide-to="1"></li>
 
     </ol>
+    <?php
 
+    $db_host = 'localhost'; // Server Name
+    $db_user = 'root'; // Username
+    $db_pass = ''; // Password
+    $db_name = 'megasky'; // Database Name
+
+    $conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+    if (!$conn) {
+        die ('Failed to connect to MySQL: ' . mysqli_connect_error());
+    }
+
+    $sql = "SELECT * FROM t_pre_pago";
+
+    $query = mysqli_query($conn, $sql);
+
+    if (!$query) {
+        die ('SQL Error: ' . mysqli_error($conn));
+    }
+
+    ?>
+
+    <?php
+    $row = mysqli_fetch_array($query);
+    $name = $row['t_name'];
+    $price = $row['t_price'];
+    $description = $row['t_description'];
+
+    ?>
     <!-- First slide -->
     <div class="Banda carousel-inner">
         <div class="carousel-item active">
             <div class="card" style="width: 20rem;">
                 <div class="titleCat">
-                    <p>Light + WI-FI</p>
+                    <p><?php echo $name ?></p>
                 </div>
 
                 <div class="card-body col-md-12">
                     <div class="container">
                         <div class="row">
                             <div class="spotPrice col-md-12">
-                                <p>A partir de</p><span class="price2">R$ 39,90</span><span class="afterPrince">/mês</span>
+                                <p>A partir de</p><span class="price2">R$ <?php echo $price ?></span><span class="afterPrince">/mês</span>
                             </div>
                         </div>
                         <div class="row">
                             <div class="condition col-md-12">
-                                <p>PLANO DE 1 MEGA COM VELOCIDADE EM DOBRO</p>
+                                <p><?php echo $description ?></p>
                             </div>
                         </div>
                     </div>

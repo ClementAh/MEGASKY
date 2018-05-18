@@ -1,3 +1,4 @@
+<?php include "./form_queries.php"?>
 <!doctype html>
 <html lang="en">
 <head>

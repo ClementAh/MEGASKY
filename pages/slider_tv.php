@@ -1,3 +1,38 @@
+
+<?php
+
+$db_host = 'localhost'; // Server Name
+$db_user = 'root'; // Username
+$db_pass = ''; // Password
+$db_name = 'megasky'; // Database Name
+
+$conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+if (!$conn) {
+    die ('Failed to connect to MySQL: ' . mysqli_connect_error());
+}
+
+$sql = "SELECT * FROM t_pos_pago";
+
+$query = mysqli_query($conn, $sql);
+
+if (!$query) {
+    die ('SQL Error: ' . mysqli_error($conn));
+}
+
+?>
+
+<?php
+$row = mysqli_fetch_array($query);
+$name = $row['t_name'];
+$pics = $row['t_pictures'];
+$canais = $row['t_canais'];
+$canais2 = $row ['t_canais_hd'];
+$equipamento = $row['t_equipamento'];
+$price = $row['price'];
+$description = $row['t_description'];
+
+?>
+
 <!-- Slider TV -->
 
 
@@ -13,23 +48,23 @@
         <div class="carousel-item active">
             <div class="card" style="width: 20rem;">
                 <div class="categorie">
-                    <p>SMART</p>
+                    <p><?php echo $name ?></p>
                 </div>
-                <img class="card-img-top" src="./assets/img/hunger.jpg" alt="Card image cap">
+                <?php echo '<img src="./assets/img/'.$pics.'"/>'; ?>
                 <div class="description container-fluid">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="canais col-md-3">
-                                        <p><span>103</span> CANAIS</p>
+                                        <p><span><?php echo $canais ?></span> CANAIS</p>
 
                                     </div>
                                     <div class="canais col-md-3">
-                                        <p><span>0</span><br>CANAIS HD</p>
+                                        <p><span><?php echo $canais2 ?></span> <br>CANAIS HD</p>
                                     </div>
                                     <div class="canais col-md-3">
-                                        <p><span>1</span> EQUIPAMENTO</p>
+                                        <p><span><?php echo $equipamento ?></span> EQUIPAMENTO</p>
                                     </div>
                                 </div>
                             </div>
@@ -40,7 +75,7 @@
                 </div>
 
                 <div class="price">
-                    <span>R$ 32,45</span> <p>NO PRIMERO MES</p>
+                    <span>R$<?php echo $price ?></span> <p><?php echo $description ?></p>
                 </div>
                 <div class="container-fluid">
                     <div class="row">
@@ -297,3 +332,4 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
+
