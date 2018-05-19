@@ -27,217 +27,62 @@
         die ('SQL Error: ' . mysqli_error($conn));
     }
 
-    ?>
-
-    <?php
-    $row = mysqli_fetch_array($query);
-    $name = $row['t_name'];
-    $price = $row['t_price'];
-    $description = $row['t_description'];
 
     ?>
     <!-- First slide -->
     <div class="Banda carousel-inner">
         <div class="carousel-item active">
-            <div class="card" style="width: 20rem;">
-                <div class="titleCat">
-                    <p><?php echo $name ?></p>
-                </div>
 
-                <div class="card-body col-md-12">
-                    <div class="container">
-                        <div class="row">
-                            <div class="spotPrice col-md-12">
-                                <p>A partir de</p><span class="price2">R$ <?php echo $price ?></span><span class="afterPrince">/mês</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="condition col-md-12">
-                                <p><?php echo $description ?></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <?php
 
-                <div class="container-full">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <a class="button btn btn-primary" href="#">DETALHES</a>
-                        </div>
-                        <div class="col-md-6">
-                            <a href="#" class="btn btn-primary">ASSINA</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            while ($row = mysqli_fetch_array($query)) {
 
 
-            <div class="card" style="width: 20rem;">
-                <div class="titleCat">
-                    <p>2 MEGA + WI-FI</p>
-                </div>
+                echo
+                ("<div class=\"card\" style=\"width: 20rem;\">
+        "."<div class=\"menu\">
+        "."<a href=\"../create_pre_pago.php?id=".$row['ID_pre_pago']."\"><i class=\"fas fa-plus\"></i></a>
+        "."<a href=\"../update_pre_pago.php?id=".$row['ID_pre_pago']."\"><i class=\"fas fa-edit\"></i></a>
+        "."<a href=\"../delete_query.php?id=".$row['ID_pre_pago']."\"><i class=\"fas fa-trash-alt\"></i></a>
+        "."<div class=\"titleCat\">
+        "."<p>".$row['t_name']."</p>
+        "."</div>
+        "."<div class=\"card-body col-md-12\">"."
+        "."<div class=\"container\">
+        "."<div class=\"row\">
+        "."<div class=\"spotPrice col-md-12\">
+        "."<p>A partir de</p><span class=\"price2\">R$ ".$row['t_price']."</span><span class=\"afterPrince\">/mês</span>
+        "."</div>
+        "."</div>
+        "."<div class=\"row\">
+        "."<div class=\"condition col-md-12\">
+        "."<p>".$row['t_description']."</p>
+        "."</div>
+        "."</div>
+        "."</div>
+        "."</div>
+        "."</div>
+        "."<div class=\"container-full\">
+        "."<div class=\"row\">
+        "."<div class=\"col-md-6\">
+        "."<a class=\"button btn btn-primary\" href=\"#\">DETALHES</a>
+        "."</div>
+        "."<div class=\"col-md-6\">
+        "."<a href=\"#\" class=\"btn btn-primary\">ASSINA</a>
+        "."</div>
+        "."</div>
+        "."</div>
+        "."</div>");
 
-                <div class="card-body col-md-12">
-                    <div class="container">
-                        <div class="row">
-                            <div class="spotPrice col-md-12">
-                                <p>A partir de</p><span class="price2">R$ 49,90</span><span class="afterPrince">/mês</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="condition col-md-12">
-                                <p>TENHA INTERNET EM CASA PARA TODA A FAMILIA</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container-full">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <a class="button btn btn-primary" href="#">DETALHES</a>
-                        </div>
-                        <div class="col-md-6">
-                            <a href="#" class="btn btn-primary">ASSINA</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card" style="width: 20rem;">
-                <div class="titleCat">
-                    <p>4 MEGA + WI-FI</p>
-                </div>
-
-                <div class="card-body col-md-12">
-                    <div class="container">
-                        <div class="row">
-                            <div class="spotPrice col-md-12">
-                                <p>A partir de</p><span class="price2">R$ 74,90</span><span class="afterPrince">/mês</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="condition col-md-12">
-                                <p>MUITA VELOCIDADE PARA VOCÊ CURTIR O MELHOR DA INTERNET</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container-full">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <a class="button btn btn-primary" href="#">DETALHES</a>
-                        </div>
-                        <div class="col-md-6">
-                            <a href="#" class="btn btn-primary">ASSINA</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
+            }
+            ?>
         </div>
-
-        <!-- Second slide -->
-
-        <div class="carousel-item">
-            <div class="card" style="width: 20rem;">
-                <div class="titleCat">
-                    <p>LIGHT + WI-FI</p>
-                </div>
-
-                <div class="card-body col-md-12">
-                    <div class="container">
-                        <div class="row">
-                            <div class="spotPrice col-md-12">
-                                <p>A partir de</p><span class="price2">R$ 39,90</span><span class="afterPrince">/mês</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="condition col-md-12">
-                                <p>PLANO DE 1 MEGA COM VELOCIDADE EM DOBRO</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container-full">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <a class="button btn btn-primary" href="#">DETALHES</a>
-                        </div>
-                        <div class="col-md-6">
-                            <a href="#" class="btn btn-primary">ASSINA</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card" style="width: 20rem;">
-                <div class="titleCat">
-                    <p>2 MEGA + WI-FI</p>
-                </div>
-
-                <div class="card-body col-md-12">
-                    <div class="container">
-                        <div class="row">
-                            <div class="spotPrice col-md-12">
-                                <p>A partir de</p><span class="price2">R$ 49,90</span><span class="afterPrince">/mês</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="condition col-md-12">
-                                <p>TENHA INTERNET EM CASA PARA TODA A FAMILIA</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container-full">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <a class="button btn btn-primary" href="#">DETALHES</a>
-                        </div>
-                        <div class="col-md-6">
-                            <a href="#" class="btn btn-primary">ASSINA</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card" style="width: 20rem;">
-                <div class="titleCat">
-                    <p>4 MEGA + WI-FI</p>
-                </div>
-
-                <div class="card-body col-md-12">
-                    <div class="container">
-                        <div class="row">
-                            <div class="spotPrice col-md-12">
-                                <p>A partir de</p><span class="price2">R$ 74,90</span><span class="afterPrince">/mês</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="condition col-md-12">
-                                <p>MUITA VELOCIDADE PARA VOCÊ CURTIR O MELHOR DA INTERNET</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container-full">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <a class="button btn btn-primary" href="#">DETALHES</a>
-                        </div>
-                        <div class="col-md-6">
-                            <a href="#" class="btn btn-primary">ASSINA</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
 
     </div>
+
+
+
+
 
     <a class="carousel-control-prev" href="#BandaExampleIndicators" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>

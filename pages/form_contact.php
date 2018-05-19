@@ -44,6 +44,7 @@ if(isset($_POST['assine'])) {
         $sql2 = "INSERT INTO t_contact (ID_contact,t_name,t_email,t_telephone,t_categories,t_message) VALUES (NULL, '$name','$mail','$telephone','$categories','$message1')";
         if ($conn->query($sql2) === TRUE) {
             echo "Votre demande a bien été envoyée !";
+            echo "<a class=\"btn btn-outline-primary\" href='../index.php'>Home</a>";
         } else {
             echo "Error: " . $sql2 . "<br>" . $conn->error;
         }

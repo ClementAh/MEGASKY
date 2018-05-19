@@ -33,7 +33,6 @@
                                 </select>
                             </div>
                             <div class="form-group">
-
                                 <textarea class="form-control" placeholder="Message" rows="5"></textarea>
                             </div>
 
