@@ -12,12 +12,44 @@
 
 </head>
 <body>
-<?php $name2 = $_GET['name']; ?>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"><img src ="../assets/img/megasky.png" width="100px", height="35px"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="../index.php">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./cms_pages/pos_pago_cms.php">Pos Pago</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./cms_pages/pre_pago_cms.php">Pre Pago</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./cms_pages/banda_larga_cms.php">Banda Larga</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./cms_pages/message_cms.php">Message</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./cms_pages/detalhes_pre_pago_cms.php">Detahles</a>
+            </li>
 
-<p> Delete <?php echo $name2 ?></p>
+        </ul>
+    </div>
+</nav>
+
+<?php
+
+$name2 = $_GET['name']; ?>
+
+<p> Delete <?php echo $name2 ?> ? </p>
 <form method="post">
 
-    <input type="submit" class="btn btn-primary" name="deletePos" value="Delete Pos">
+    <input type="submit" class="btn btn-primary" name="deletePos" value= Delete>
 
 </form>
 
@@ -41,7 +73,7 @@ if(isset($_POST['deletePos'])) {
         die ('Failed to connect to MySQL: ' . mysqli_connect_error());
     }
 
-    $sql = "DELETE FROM t_pos_pago WHERE ID_pos_pago = '$id'";
+    $sql = "DELETE FROM t_pos_pago, t_pre_pago, t_banda_larga ON ID_pos_pago.ID_pre_pago, ID_banda_larga = '$id' AND t_name = '$name2'";
 
     $query = mysqli_query($conn, $sql);
 
@@ -60,43 +92,84 @@ if(isset($_POST['deletePos'])) {
 
 <!-- PRE PAGO -->
 
-<?php $name = $_GET['name']; ?>
-
-<p> Delete <?php echo $name ?></p>
-
-<form method="post">
-    <input type="submit" class="btn btn-primary" name="deletePre" value="Delete Pre">
-
-</form>
-
 <?php
+//$name = $_GET['name']; ?>
+<!---->
+<!--<p> Delete --><?php //echo $name ?><!--</p>-->
+<!---->
+<!--<form method="post">-->
+<!--    <input type="submit" class="btn btn-primary" name="deletePre" value="Delete Pre">-->
+<!---->
+<!--</form>-->
+<!---->
+<?php
+//
+//if(isset($_POST['deletePre'])) {
+//
+//    $id = $_GET['id'];
+//    $db_host = 'localhost'; // Server Name
+//    $db_user = 'root'; // Username
+//    $db_pass = ''; // Password
+//    $db_name = 'megasky'; // Database Name
+//
+//    $conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+//    if (!$conn) {
+//        die ('Failed to connect to MySQL: ' . mysqli_connect_error());
+//    }
+//
+//    $sql = "DELETE FROM t_pre_pago WHERE ID_pre_pago = '$id'";
+//
+//    $query = mysqli_query($conn, $sql);
+//
+//    if (!$query) {
+//        die ('SQL Error: ' . mysqli_error($conn));
+//    }
+//    echo "Delete successfull";
+//    echo "<a href='./cms_pages/pre_pago_cms.php'>FORMS</a>";
+//}
+//
+//
+//?>
+<!---->
+<?php //$name = $_GET['name']; ?>
+<!---->
+<!--<p> Delete --><?php //echo $name ?><!--</p>-->
+<!---->
+<!--<form method="post">-->
+<!--    <input type="submit" class="btn btn-primary" name="deleteBanda" value="Delete Banda">-->
+<!---->
+<!--</form>-->
+<!---->
+<?php
+//
+//if(isset($_POST['deleteBanda'])) {
+//
+//    $id = $_GET['id'];
+//    $db_host = 'localhost'; // Server Name
+//    $db_user = 'root'; // Username
+//    $db_pass = ''; // Password
+//    $db_name = 'megasky'; // Database Name
+//
+//    $conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+//    if (!$conn) {
+//        die ('Failed to connect to MySQL: ' . mysqli_connect_error());
+//    }
+//
+//    $sql = "DELETE FROM t_banda_larga WHERE ID_banda_larga = '$id'";
+//
+//    $query = mysqli_query($conn, $sql);
+//
+//    if (!$query) {
+//        die ('SQL Error: ' . mysqli_error($conn));
+//    }
+//    echo "Delete successfull";
+//    echo "<a href='./cms_pages/banda_larga_cms.php'>Return</a>";
+//}
+//
+//
+//?>
+<!---->
 
-if(isset($_POST['deletePre'])) {
-
-    $id = $_GET['id'];
-    $db_host = 'localhost'; // Server Name
-    $db_user = 'root'; // Username
-    $db_pass = ''; // Password
-    $db_name = 'megasky'; // Database Name
-
-    $conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
-    if (!$conn) {
-        die ('Failed to connect to MySQL: ' . mysqli_connect_error());
-    }
-
-    $sql = "DELETE FROM t_pre_pago WHERE ID_pre_pago = '$id'";
-
-    $query = mysqli_query($conn, $sql);
-
-    if (!$query) {
-        die ('SQL Error: ' . mysqli_error($conn));
-    }
-    echo "Delete successfull";
-    echo "<a href='./cms_pages/pre_pago_cms.php'>FORMS</a>";
-}
-
-
-?>
 
 
 

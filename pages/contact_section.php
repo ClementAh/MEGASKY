@@ -36,9 +36,6 @@
                                 <textarea class="form-control" placeholder="Message" rows="5"></textarea>
                             </div>
 
-
-
-
                         </form>
 
 

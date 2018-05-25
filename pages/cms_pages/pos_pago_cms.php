@@ -29,7 +29,13 @@
                 <a class="nav-link" href="../cms_pages/pre_pago_cms.php">Pre Pago</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="../cms_pages/banda_larga_cms.php">Banda Larga</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="../cms_pages/message_cms.php"> Message</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="detalhes_pre_pago_cms.php">Detahles</a>
             </li>
 
         </ul>
@@ -64,7 +70,7 @@ while ($row = mysqli_fetch_array($query)) {
      "."<div class=\"menu\">
      "."<a href=\"../create_pos_pago.php?id=".$row['ID_pos_pago']."\"><i class=\"fas fa-plus\"></i></a>
      "."<a href=\"../update_pos_pago.php?id=".$row['ID_pos_pago']."\"><i class=\"fas fa-edit\"></i></a>
-     "."<a href=\"../delete_query.php?id=".$row['ID_pos_pago']."\"><i class=\"fas fa-trash-alt\"></i></a>
+     "."<a href=\"../delete_query.php?id=".$row['ID_pos_pago']."&amp;name=".$row['t_name']."\"><i class=\"fas fa-trash-alt\"></i></a>
      "."</div>
      "." <div class=\"categorie\">
      "."<p>".$row['t_name']."</p>
@@ -99,7 +105,7 @@ while ($row = mysqli_fetch_array($query)) {
      "."<div class=\"container-fluid\">
      "."<div class=\"row\">
      "."<div class=\"col-md-6\">
-     "."<a class=\"button btn btn-primary\" href=\"#\">DETALHES</a>
+     "."<a class=\"button btn btn-primary\" href=\"./detalhes_pos_pago_cms.php?id=".$row['ID_pos_pago']."\">DETALHES</a>
      "."</div>
      "."<div class=\"col-md-6\">
      "."<a class=\"btn btn-primary\" href=\"#\">ASSINAR</a>
@@ -109,7 +115,42 @@ while ($row = mysqli_fetch_array($query)) {
      "."</div>");
 
 }
+
 ?>
+
+<?php
+
+$sql2 = "SELECT * FROM t_packages";
+
+$query = mysqli_query($conn, $sql2);
+
+?>
+
+<form method='post'>
+    <select>
+<?php while($row = mysqli_fetch_array($query)){
+      echo ("<option> ".$row['t_name']." </option>");
+        } ?>
+    </select>
+
+</form>
+
+<?php
+
+$sql2 = "SELECT * FROM t_packages";
+
+$query = mysqli_query($conn, $sql2);
+
+?>
+
+<form method='post'>
+    <select>
+        <?php while($row = mysqli_fetch_array($query)){
+            echo ("<option> ".$row['t_name']." </option>");
+        } ?>
+    </select>
+
+</form>
 
 
 

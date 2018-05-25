@@ -5,13 +5,14 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CMS PRE PAGO</title>
+    <title>CMS MESSAGE</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="../../assets/css/styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
 </head>
 <body>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#"><img src ="../../assets/img/megasky.png" width="100px", height="35px"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,7 +44,7 @@
 </nav>
 
 <?php
-
+$id = $_GET['id'];
 $db_host = 'localhost'; // Server Name
 $db_user = 'root'; // Username
 $db_pass = ''; // Password
@@ -54,7 +55,7 @@ if (!$conn) {
     die ('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
 
-$sql = "SELECT * FROM t_pre_pago";
+$sql = "SELECT * FROM t_pre_pago WHERE ID_pre_pago = '$id'";
 
 $query = mysqli_query($conn, $sql);
 
@@ -66,68 +67,58 @@ if (!$query) {
 while ($row = mysqli_fetch_array($query)) {
 
 
-    echo
-    ("<div class=\"card\" style=\"width: 20rem;\">
-        "."<div class=\"menu\">
-        "."<a href=\"../create_pre_pago.php?id=".$row['ID_pre_pago']."\"><i class=\"fas fa-plus\"></i></a>
-        "."<a href=\"../update_pre_pago.php?id=".$row['ID_pre_pago']."\"><i class=\"fas fa-edit\"></i></a>
-        "."<a href=\"../delete_query.php?id=".$row['ID_pre_pago']."&amp;name=".$row['t_name']."\"><i class=\"fas fa-trash-alt\"></i></a>
-        "."<div class=\"titleCat\">
-        "."<p>".$row['t_name']."</p>
-        "."</div>
-        "."<div class=\"card-body col-md-12\">"."
-        "."<div class=\"container\">
-        "."<div class=\"row\">
-        "."<div class=\"spotPrice col-md-12\">
-        "."<p>A partir de</p><span class=\"price2\">R$ ".$row['t_price']."</span><span class=\"afterPrince\">/mês</span>
-        "."</div>
-        "."</div>
-        "."<div class=\"row\">
-        "."<div class=\"condition col-md-12\">
-        "."<p>".$row['t_description']."</p>
-        "."</div>
-        "."</div>
-        "."</div>
-        "."</div>
-        "."</div>
-        "."<div class=\"container-full\">
-        "."<div class=\"row\">
-        "."<div class=\"col-md-6\">
-        "."<a class=\"button btn btn-primary\" href=\"./detalhes_pre_pago_cms.php?id=".$row['ID_pre_pago']."\">DETALHES</a>
-        "."</div>
-        "."<div class=\"col-md-6\">
-        "."<a href=\"#\" class=\"btn btn-primary\">ASSINA</a>
-        "."</div>
-        "."</div>
-        "."</div>
-        "."</div>");
+    echo("<div class=\"container\">
+"."<div class='row'>
+"."<div class='col-md-12'>
+"." " . $row['t_name'] . "
+</div>
+</div>
+</div>
+<div class='container'>
+<div class='row'>
+<div class='col-md-12'>
+"."<p>R$</p>" . $row['t_price'] . " <p>/mês</p>
+</div>
+</div>
+</div>
+<div class='container'>
+<div class='row'>
+<div class='col-md-12'>
+"."" . $row['t_description'] . "
+</div>
+</div>
+</div>
 
+");
 
 }
+
+
 ?>
 
 
+<?php
+$id = $_GET['id'];
+$db_host = 'localhost'; // Server Name
+$db_user = 'root'; // Username
+$db_pass = ''; // Password
+$db_name = 'megasky'; // Database Name
 
+$conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+if (!$conn) {
+    die ('Failed to connect to MySQL: ' . mysqli_connect_error());
+}
 
+$sql = "SELECT *
+FROM t_categories
+CROSS t_channels";
 
-<script>
-    window.fbAsyncInit = function() {
-        FB.init({
-            appId            : 'your-app-id',
-            autoLogAppEvents : true,
-            xfbml            : true,
-            version          : 'v3.0'
-        });
-    };
+$query = mysqli_query($conn, $sql);
 
-    (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-</script>
+if (!$query) {
+    die ('SQL Error: ' . mysqli_error($conn));
+}
 
-
-
+while ($row = mysqli_fetch_array($query)) {
+    echo    ("<form method=\"post\"><select><option>".$row['t_name']."</option></select>");
+}

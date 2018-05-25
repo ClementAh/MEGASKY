@@ -334,3 +334,27 @@
 .number p {
     margin-top: 12px;
 }
+
+/*-------------------------------------------------*/
+
+.titlePos {
+    text-align: center;
+    font-size: 45px;
+
+}
+
+.imagePos {
+    text-align: center;
+
+}
+
+.imagePos img {
+    width: 550px;
+    height: 325px;
+}
+
+.canaisPos {
+ margin-top: 100px;
+    width: 250px;
+}
+

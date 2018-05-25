@@ -65,3 +65,33 @@ if(isset($_POST['createPrePago'])) {
 }
 ?>
 
+
+<?php
+
+if(isset($_POST['createBandaLarga'])) {
+$name = ($_POST['name']);
+$price = ($_POST['price']);
+$description = ($_POST['description']);
+
+$db_host = 'localhost'; // Server Name
+$db_user = 'root'; // Username
+$db_pass = ''; // Password
+$db_name = 'megasky'; // Database Name
+
+$conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+if (!$conn) {
+die ('Failed to connect to MySQL: ' . mysqli_connect_error());
+}
+
+$sql = "INSERT INTO t_banda_larga (ID_banda_larga,t_name ,t_price, t_description) VALUES (NULL, '$name', '$price','$description')";
+
+$query = mysqli_query($conn, $sql);
+
+if (!$query) {
+die ('SQL Error: ' . mysqli_error($conn));
+}
+echo "Creation successfull";
+echo "<a href='./cms_pages/banda_larga_cms.php'>Return</a>";
+}
+?>
+

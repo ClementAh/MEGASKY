@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CMS PRE PAGO</title>
+    <title>CMS BANDA LARGA</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="../../assets/css/styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -42,6 +42,7 @@
     </div>
 </nav>
 
+
 <?php
 
 $db_host = 'localhost'; // Server Name
@@ -54,7 +55,7 @@ if (!$conn) {
     die ('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
 
-$sql = "SELECT * FROM t_pre_pago";
+$sql = "SELECT * FROM t_banda_larga";
 
 $query = mysqli_query($conn, $sql);
 
@@ -66,12 +67,13 @@ if (!$query) {
 while ($row = mysqli_fetch_array($query)) {
 
 
+
     echo
     ("<div class=\"card\" style=\"width: 20rem;\">
         "."<div class=\"menu\">
-        "."<a href=\"../create_pre_pago.php?id=".$row['ID_pre_pago']."\"><i class=\"fas fa-plus\"></i></a>
-        "."<a href=\"../update_pre_pago.php?id=".$row['ID_pre_pago']."\"><i class=\"fas fa-edit\"></i></a>
-        "."<a href=\"../delete_query.php?id=".$row['ID_pre_pago']."&amp;name=".$row['t_name']."\"><i class=\"fas fa-trash-alt\"></i></a>
+        "."<a href=\"../create_banda_larga.php?id=".$row['ID_banda_larga']."\"><i class=\"fas fa-plus\"></i></a>
+        "."<a href=\"../update_banda_larga.php?id=".$row['ID_banda_larga']."\"><i class=\"fas fa-edit\"></i></a>
+        "."<a href=\"../delete_query.php?id=".$row['ID_banda_larga']."&amp;name=".$row['t_name']."\"><i class=\"fas fa-trash-alt\"></i></a>
         "."<div class=\"titleCat\">
         "."<p>".$row['t_name']."</p>
         "."</div>
@@ -93,7 +95,7 @@ while ($row = mysqli_fetch_array($query)) {
         "."<div class=\"container-full\">
         "."<div class=\"row\">
         "."<div class=\"col-md-6\">
-        "."<a class=\"button btn btn-primary\" href=\"./detalhes_pre_pago_cms.php?id=".$row['ID_pre_pago']."\">DETALHES</a>
+        "."<a class=\"button btn btn-primary\" href=\"#\">DETALHES</a>
         "."</div>
         "."<div class=\"col-md-6\">
         "."<a href=\"#\" class=\"btn btn-primary\">ASSINA</a>
@@ -102,32 +104,5 @@ while ($row = mysqli_fetch_array($query)) {
         "."</div>
         "."</div>");
 
-
 }
 ?>
-
-
-
-
-
-<script>
-    window.fbAsyncInit = function() {
-        FB.init({
-            appId            : 'your-app-id',
-            autoLogAppEvents : true,
-            xfbml            : true,
-            version          : 'v3.0'
-        });
-    };
-
-    (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-</script>
-
-
-
