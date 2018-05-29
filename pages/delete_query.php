@@ -73,7 +73,7 @@ if(isset($_POST['deletePos'])) {
         die ('Failed to connect to MySQL: ' . mysqli_connect_error());
     }
 
-    $sql = "DELETE FROM t_pos_pago, t_pre_pago, t_banda_larga ON ID_pos_pago.ID_pre_pago, ID_banda_larga = '$id' AND t_name = '$name2'";
+    $sql = "DELETE FROM t_pos_pago WHERE ID_pos_pago = '$id'";
 
     $query = mysqli_query($conn, $sql);
 

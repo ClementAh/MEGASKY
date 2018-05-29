@@ -15,7 +15,7 @@
                 <div class="row">
                     <div class="form col-md-6">
                         <form method="post">
-                            <div class="form-group">
+                            <div class="form-group" >
                                 <input type="text" class="form-control" placeholder="Nome" name="name">
                             </div>
                             <div class="form-group">

@@ -34,9 +34,10 @@
             <li class="nav-item">
                 <a class="nav-link" href="../cms_pages/message_cms.php">Message</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="detalhes_pre_pago_cms.php">Detahles</a>
+            <li>
+                <a class="nav-link" href="./chat.php">Chat</a>
             </li>
+
 
         </ul>
     </div>
@@ -69,40 +70,63 @@ while ($row = mysqli_fetch_array($query)) {
 
 
     echo
-    ("<div class=\"card\" style=\"width: 20rem;\">
-        "."<div class=\"menu\">
-        "."<a href=\"../create_banda_larga.php?id=".$row['ID_banda_larga']."\"><i class=\"fas fa-plus\"></i></a>
-        "."<a href=\"../update_banda_larga.php?id=".$row['ID_banda_larga']."\"><i class=\"fas fa-edit\"></i></a>
-        "."<a href=\"../delete_query.php?id=".$row['ID_banda_larga']."&amp;name=".$row['t_name']."\"><i class=\"fas fa-trash-alt\"></i></a>
-        "."<div class=\"titleCat\">
-        "."<p>".$row['t_name']."</p>
-        "."</div>
-        "."<div class=\"card-body col-md-12\">"."
+    ("<div class=\"card\" style=\"width: 20rem;\"> 
+
+    <div class=\"card-header\">
+        <ul class=\"nav justify-content-center\">
+        
+             <li class=\"nav-item\">
+                 <a class=\"nav-link\" href=\"../create_pre_pago.php?id=".$row['ID_banda_larga']."\">Create</a>
+             </li>
+             
+             <li class=\"nav-item\">
+                 <a class=\"nav-link\" href=\"../update_pre_pago.php?id=".$row['ID_banda_larga']."\">Update</a>
+             </li>
+             
+             <li class=\"nav-item\">
+                 <a class=\"nav-link\" href=\"../delete_query.php?id=".$row['ID_banda_larga']."&amp;name=".$row['t_name']."\">Delete</a>
+             </li>
+             
+         </ul>
+   </div> 
+      
+    "."<div class=\"titleCat\">
+    "."<p>".$row['t_name']."</p>
+    "."</div>
+
+    "."<div class=\"card-body col-md-12\">"."
         "."<div class=\"container\">
+             "."<div class=\"row\">
+             
+                "."<div class=\"spotPrice col-md-12\">
+                    "."<p>A partir de</p><span class=\"price2\">R$ ".$row['t_price']."</span><span class=\"afterPrince\">/mês</span>
+                "."</div>
+                
+             "."</div>
         "."<div class=\"row\">
-        "."<div class=\"spotPrice col-md-12\">
-        "."<p>A partir de</p><span class=\"price2\">R$ ".$row['t_price']."</span><span class=\"afterPrince\">/mês</span>
-        "."</div>
-        "."</div>
-        "."<div class=\"row\">
+     
+      
         "."<div class=\"condition col-md-12\">
-        "."<p>".$row['t_description']."</p>
+            "."<p>".$row['t_description']."</p>
         "."</div>
-        "."</div>
-        "."</div>
-        "."</div>
-        "."</div>
-        "."<div class=\"container-full\">
-        "."<div class=\"row\">
-        "."<div class=\"col-md-6\">
-        "."<a class=\"button btn btn-primary\" href=\"#\">DETALHES</a>
-        "."</div>
-        "."<div class=\"col-md-6\">
-        "."<a href=\"#\" class=\"btn btn-primary\">ASSINA</a>
-        "."</div>
-        "."</div>
-        "."</div>
-        "."</div>");
+    
+    "."</div>
+    
+    </div>
+    
+    "."</div>
+    "."<div class=\"container\">
+    "."<div class=\"row\">
+    "."<div class=\"col-md-6\">
+    "."<a class=\"button btn btn-primary\" href=\"./detalhes_pre_pago_cms.php?id=".$row['ID_banda_larga']."\">DETALHES</a>
+    "."</div>
+    "."<div class=\"col-md-6\">
+    "."<a href=\"#\" class=\"btn btn-primary\">ASSINA</a>
+    "."</div>
+    "."</div>
+    "."</div>
+    "."</div>
+    "."</div>");
+
 
 }
-?>

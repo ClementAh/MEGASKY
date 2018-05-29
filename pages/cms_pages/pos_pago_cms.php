@@ -34,9 +34,10 @@
             <li class="nav-item">
                 <a class="nav-link" href="../cms_pages/message_cms.php"> Message</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="detalhes_pre_pago_cms.php">Detahles</a>
+            <li>
+                <a class="nav-link" href="./chat.php">Chat</a>
             </li>
+
 
         </ul>
     </div>
@@ -67,11 +68,19 @@ while ($row = mysqli_fetch_array($query)) {
 
     echo
     ("<div class=\"card\" style=\"width: 20rem;\">
-     "."<div class=\"menu\">
-     "."<a href=\"../create_pos_pago.php?id=".$row['ID_pos_pago']."\"><i class=\"fas fa-plus\"></i></a>
-     "."<a href=\"../update_pos_pago.php?id=".$row['ID_pos_pago']."\"><i class=\"fas fa-edit\"></i></a>
-     "."<a href=\"../delete_query.php?id=".$row['ID_pos_pago']."&amp;name=".$row['t_name']."\"><i class=\"fas fa-trash-alt\"></i></a>
-     "."</div>
+  <div class=\"card-header\">
+   <ul class=\"nav justify-content-center\">
+      <li class=\"nav-item\">
+        <a class=\"nav-link\" href=\"../create_pos_pago.php?id=".$row['ID_pos_pago']."\">Create</a>
+      </li>
+      <li class=\"nav-item\">
+        <a class=\"nav-link\" href=\"../update_pos_pago.php?id=".$row['ID_pos_pago']."\">Update</a>
+      </li>
+      <li class=\"nav-item\">
+        <a class=\"nav-link\" href=\"../delete_query.php?id=".$row['ID_pos_pago']."\">Delete</a>
+      </li>
+    </ul>
+  </div>
      "." <div class=\"categorie\">
      "."<p>".$row['t_name']."</p>
      "."</div>
@@ -125,34 +134,6 @@ $sql2 = "SELECT * FROM t_packages";
 $query = mysqli_query($conn, $sql2);
 
 ?>
-
-<form method='post'>
-    <select>
-<?php while($row = mysqli_fetch_array($query)){
-      echo ("<option> ".$row['t_name']." </option>");
-        } ?>
-    </select>
-
-</form>
-
-<?php
-
-$sql2 = "SELECT * FROM t_packages";
-
-$query = mysqli_query($conn, $sql2);
-
-?>
-
-<form method='post'>
-    <select>
-        <?php while($row = mysqli_fetch_array($query)){
-            echo ("<option> ".$row['t_name']." </option>");
-        } ?>
-    </select>
-
-</form>
-
-
 
 
 

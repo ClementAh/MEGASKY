@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+/*------------------- NAVBAR  -----------------------------*/
+
 .logo {
     width: 122px;
     height: 30px;
@@ -48,6 +50,8 @@
 
 }
 
+/*------------------------------------------------------*/
+
 
 .button-primary{
     background-color: #FD4A4A;
@@ -58,6 +62,11 @@
 
 
 }
+
+
+
+
+/*----------------- CARDS -------------------------*/
 
 .card {
     display: inline-block;
@@ -77,119 +86,6 @@
     color: white;
     text-align: center;
     padding-top: 7px;
-}
-
-/*.card2 {*/
-/*display: inline-block;*/
-/*float: left;*/
-/*margin : 76px 76px 76px 119px;*/
-/*padding: 0;*/
-/*}*/
-
-.carousel-inner {
-    background-color: #FAFAFA;
-}
-
-.Banda {
-    background-color: #EDEDED;
-}
-
-.spotlight {
-    background-color: #FD4A4A;
-    height: 126px;
-
-}
-
-.link {
-    margin-top: 40px;
-    margin-bottom: 31px;
-    width: 520px;
-    height: 48px;
-
-}
-
-.link a {
-    font-style: italic;
-    font-size: 37px;
-    font-family: 'Roboto', sans-serif;
-    color: #FAFAFA;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.link a:hover {
-    text-decoration: none;
-    color: #F2F2F2;
-}
-
-
-.SpotButton.btn-primary{
-    width: 205px;
-    height: 51px;
-    background-color:#D23737;
-    margin: 44px 62px 31px 50px;
-    color:white !important;
-    font-weight: bold;
-    font-size: 24px;
-
-
-}
-
-.sectionContact {
-    background-color: #EDEDED;
-}
-.contact {
-    width: 525px;
-    height: 575px;
-}
-
-.imgContact {
-    margin: 85px 0 0 38px;
-}
-.logoSky {
-    width: 159px;
-    height:76px ;
-    margin-left: 88px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-}
-
-.form {
-    width: 362px;
-    height: 511px;
-    padding: 20px;
-    margin: 90px 47px 56px 133px;
-    background-color: #FAFAFA;
-    border-radius: 15px;
-    -webkit-box-shadow: -1px 1px 14px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: -1px 1px 14px 0px rgba(0,0,0,0.75);
-    box-shadow: -1px 1px 14px 0px rgba(0,0,0,0.75);
-
-}
-
-.form-group input {
-    background-color: #EDEDED;
-    margin: 28px 0 25px 0;
-}
-
-.form-group select {
-    background-color: #EDEDED;
-
-}
-
-.form-group textarea {
-    background-color: #EDEDED;
-}
-
-.footer {
-    background-color: #FD4A4A;
-    height: 73px;
-}
-
-.imgfooter {
-    width: 149px;
-    height: 36px;
-    margin : 19px;
 }
 
 .canais {
@@ -273,6 +169,135 @@
     height: 46px;
 }
 
+/*------------------------------------------------*/
+
+/*.card2 {*/
+/*display: inline-block;*/
+/*float: left;*/
+/*margin : 76px 76px 76px 119px;*/
+/*padding: 0;*/
+/*}*/
+
+.carousel-inner {
+    background-color: #FAFAFA;
+}
+
+.Banda {
+    background-color: #EDEDED;
+}
+
+.spotlight {
+    background-color: #FD4A4A;
+    height: 126px;
+
+}
+
+.link {
+    margin-top: 40px;
+    margin-bottom: 31px;
+    width: 520px;
+    height: 48px;
+
+}
+
+.link a {
+    font-style: italic;
+    font-size: 37px;
+    font-family: 'Roboto', sans-serif;
+    color: #FAFAFA;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link a:hover {
+    text-decoration: none;
+    color: #F2F2F2;
+}
+
+
+.SpotButton.btn-primary{
+    width: 205px;
+    height: 51px;
+    background-color:#D23737;
+    margin: 44px 62px 31px 50px;
+    color:white !important;
+    font-weight: bold;
+    font-size: 24px;
+
+
+}
+
+.sectionContact {
+    background-color: #EDEDED;
+}
+.contact {
+    width: 525px;
+    height: 575px;
+}
+
+.imgContact {
+    margin: 85px 0 0 38px;
+}
+.logoSky {
+    width: 159px;
+    height:76px ;
+    margin-left: 88px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+
+
+
+/*------------------------- FORM ---------------------------*/
+
+.form {
+    width: 362px;
+    height: 511px;
+    padding: 20px;
+    margin: 90px 47px 56px 133px;
+    background-color: #FAFAFA;
+    border-radius: 15px;
+    -webkit-box-shadow: -1px 1px 14px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 1px 14px 0px rgba(0,0,0,0.75);
+    box-shadow: -1px 1px 14px 0px rgba(0,0,0,0.75);
+
+}
+
+.form-group input {
+    background-color: #EDEDED;
+    margin: 28px 0 25px 0;
+}
+
+.form-group select {
+    background-color: #EDEDED;
+
+}
+
+.form-group textarea {
+    background-color: #EDEDED;
+}
+
+
+
+/*--------------------------------------------------------*/
+
+
+
+
+/*------------------- FOOTER ------------------------*/
+.footer {
+    background-color: #FD4A4A;
+    height: 73px;
+}
+
+.imgfooter {
+    width: 149px;
+    height: 36px;
+    margin : 19px;
+}
+
+
 .empty {
     background-color: #DFDFDF;
 }
@@ -297,6 +322,9 @@
     cursor: pointer;
 }
 
+
+
+/*------------------------- FOOTER -----------------------*/
 
 .linkFooter ul {
     padding: 0;
@@ -335,6 +363,7 @@
     margin-top: 12px;
 }
 
+
 /*-------------------------------------------------*/
 
 .titlePos {
@@ -354,7 +383,24 @@
 }
 
 .canaisPos {
- margin-top: 100px;
+    margin-top: 100px;
     width: 250px;
 }
 
+.msg {
+    font-weight: bold;
+}
+
+.showMessage {
+    background-color: #FAFAFA;
+    border:solid #FD4A4A;
+    margin-top: 100px;
+    border-radius: 7px
+;-webkit-box-shadow: 0px 6px 18px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 6px 18px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 6px 18px 0px rgba(0,0,0,0.75);'>
+}
+
+.showMessage p {
+    font-family: 'Roboto', sans-serif;
+}
