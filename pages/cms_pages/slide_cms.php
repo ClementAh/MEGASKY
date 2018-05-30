@@ -42,7 +42,7 @@
                 <a class="nav-link" href="slide_cms.php">Slide</a>
             </li>
             <li>
-                <a class="nav-link" href="packages.php"">Package</a>
+                <a class="nav-link" href="packages.php">Package</a>
             </li>
 
 
@@ -64,7 +64,7 @@ if (!$conn) {
     die ('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
 
-$sql = "SELECT * FROM t_contact";
+$sql = "SELECT * FROM t_slide";
 
 $query = mysqli_query($conn, $sql);
 
@@ -72,33 +72,70 @@ if (!$query) {
     die ('SQL Error: ' . mysqli_error($conn));
 }
 
-echo  "<table class=\"table\">";
-echo "    <thead >
-    <tr class='bg-danger' >
-      <th scope = \"col\" >ID</th>
-      <th scope = \"col\" >Name</th >
-      <th scope = \"col\" >Mail</th >
-      <th scope = \"col\" >Telephone</th >
-       <th scope = \"col\" >Categorie</th >
-      <th scope = \"col\" >Message </th >
-      <th scope = \"col\">Action</th>
-    </tr >
-  </thead >";
-while ($row = mysqli_fetch_array($query)) {
 
-    echo ("<tbody >"."<tr >"."<th scope = \"row\" >".$row['ID_contact']."</th ><td >".$row['t_name']."</td ><td >".$row['t_email']."</td ><td>".$row['t_telephone']."</td ><td>".$row['t_categories']."</td ><td>".$row['t_message']."</td ><td> <form method='post' action='message_query.php?id=".$row['ID_contact']."'><input type=\"submit\" class=\"btn btn - outline - danger\" value=\"Delete\" name=\"message\"></form><form method='post' action='message_show.php?id=".$row['ID_contact']."'><input type=\"submit\" class=\"btn btn - outline - danger\" value=\"Open\" name=\"show\"></form></td></tr></tbody>");
+echo ("<div class=\"card-header\">
+   <ul class=\"nav justify-content-center\">
+      <li class=\"nav-item\">
+        <a class=\"nav-link\" href=\"../slide_create.php\">Create</a>
+      </li>
+      <li class=\"nav-item\">
+        <a class=\"nav-link\" href=\"../update_slide.php\">Update</a>
+      </li>
+      <li class=\"nav-item\">
+        <a class=\"nav-link\" href=\"../delete_query.php\">Delete</a>
+      </li>
+    </ul>
+  </div>");
 
+
+
+
+    while ($row = mysqli_fetch_array($query)) {
+
+        echo("  
+  
+         <div class=\"jarallax\" >
+                <img class=\"jarallax-img\" src=\"../../assets/img/" . $row['t_pictures'] . "\" style='height:100vh; width: 100%;'>
+                
+             <div class='container' style='position: absolute;'>
+             <div class='row'>
+             <div class='col-md-12'>
+             <h1>" . $row['big_title'] . "</h1>
+             </div>
+             </div>
+         
+            <div class='row'>
+            <div class='col-md-12'>
+            <h3>" . $row['t_description'] . "</h3> 
+            </div>
+            </div>
+         
+            <div class='row'>
+            <div class='col-md-12'>
+            <a class='btn btn-primary' href='" . $row['t_link'] . "'>Show more</a>
+            </div>
+            </div>
+         
+            </div>  <!-- CONTAINER -->
+      
+         </div> <!-- JARALLAX -->
+");
 
 }
-echo ("</table");
-
 
 ?>
+<script src="https://unpkg.com/jarallax@1.10/dist/jarallax.min.js"></script>
+
+<!-- Include it if you want to use Video parallax -->
+<script src="https://unpkg.com/jarallax@1.10/dist/jarallax-video.min.js"></script>
+
+<!-- Include it if you want to parallax any element -->
+<script src="https://unpkg.com/jarallax@1.10/dist/jarallax-element.min.js"></script>
+
+<!-- Boostrap -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
 </body>
-
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-
-

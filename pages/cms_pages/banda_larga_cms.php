@@ -37,6 +37,9 @@
             <li>
                 <a class="nav-link" href="./chat.php">Chat</a>
             </li>
+            <li>
+                <a class="nav-link" href="./slide_cms.php">Slide</a>
+            </li>
 
 
         </ul>

@@ -95,3 +95,33 @@ echo "<a href='./cms_pages/banda_larga_cms.php'>Return</a>";
 }
 ?>
 
+<?php
+
+if(isset($_POST['createSlide'])) {
+    $title = ($_POST['bigTitle']);
+    $pictures = ($_POST['pictures']);
+    $description = ($_POST['description']);
+    $link = $_POST['link'];
+
+    $db_host = 'localhost'; // Server Name
+    $db_user = 'root'; // Username
+    $db_pass = ''; // Password
+    $db_name = 'megasky'; // Database Name
+
+    $conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+    if (!$conn) {
+        die ('Failed to connect to MySQL: ' . mysqli_connect_error());
+    }
+
+    $sql = "INSERT INTO t_slide (ID_slide,big_title ,t_pictures,t_description, t_link) VALUES (NULL, '$title', '$pictures','$description','$link')";
+
+    $query = mysqli_query($conn, $sql);
+
+    if (!$query) {
+        die ('SQL Error: ' . mysqli_error($conn));
+    }
+    echo "Creation successfull";
+    echo "<a href='./cms_pages/slide_cms.php'>Return</a>";
+}
+?>
+

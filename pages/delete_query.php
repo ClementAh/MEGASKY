@@ -35,7 +35,7 @@
                 <a class="nav-link" href="./cms_pages/message_cms.php">Message</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="./cms_pages/detalhes_pre_pago_cms.php">Detahles</a>
+                <a class="nav-link" href="./cms_pages/slide_cms.php">Slide</a>
             </li>
 
         </ul>
@@ -81,94 +81,45 @@ if(isset($_POST['deletePos'])) {
         die ('SQL Error: ' . mysqli_error($conn));
     }
     echo "Delete successfull";
-    echo "<a href='./cms_pages/pos_pago_cms.php'>FORMS</a>";
+
 }
 
 
 ?>
 
-
-
-
-<!-- PRE PAGO -->
-
 <?php
-//$name = $_GET['name']; ?>
-<!---->
-<!--<p> Delete --><?php //echo $name ?><!--</p>-->
-<!---->
-<!--<form method="post">-->
-<!--    <input type="submit" class="btn btn-primary" name="deletePre" value="Delete Pre">-->
-<!---->
-<!--</form>-->
-<!---->
-<?php
-//
-//if(isset($_POST['deletePre'])) {
-//
-//    $id = $_GET['id'];
-//    $db_host = 'localhost'; // Server Name
-//    $db_user = 'root'; // Username
-//    $db_pass = ''; // Password
-//    $db_name = 'megasky'; // Database Name
-//
-//    $conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
-//    if (!$conn) {
-//        die ('Failed to connect to MySQL: ' . mysqli_connect_error());
-//    }
-//
-//    $sql = "DELETE FROM t_pre_pago WHERE ID_pre_pago = '$id'";
-//
-//    $query = mysqli_query($conn, $sql);
-//
-//    if (!$query) {
-//        die ('SQL Error: ' . mysqli_error($conn));
-//    }
-//    echo "Delete successfull";
-//    echo "<a href='./cms_pages/pre_pago_cms.php'>FORMS</a>";
-//}
-//
-//
-//?>
-<!---->
-<?php //$name = $_GET['name']; ?>
-<!---->
-<!--<p> Delete --><?php //echo $name ?><!--</p>-->
-<!---->
-<!--<form method="post">-->
-<!--    <input type="submit" class="btn btn-primary" name="deleteBanda" value="Delete Banda">-->
-<!---->
-<!--</form>-->
-<!---->
-<?php
-//
-//if(isset($_POST['deleteBanda'])) {
-//
-//    $id = $_GET['id'];
-//    $db_host = 'localhost'; // Server Name
-//    $db_user = 'root'; // Username
-//    $db_pass = ''; // Password
-//    $db_name = 'megasky'; // Database Name
-//
-//    $conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
-//    if (!$conn) {
-//        die ('Failed to connect to MySQL: ' . mysqli_connect_error());
-//    }
-//
-//    $sql = "DELETE FROM t_banda_larga WHERE ID_banda_larga = '$id'";
-//
-//    $query = mysqli_query($conn, $sql);
-//
-//    if (!$query) {
-//        die ('SQL Error: ' . mysqli_error($conn));
-//    }
-//    echo "Delete successfull";
-//    echo "<a href='./cms_pages/banda_larga_cms.php'>Return</a>";
-//}
-//
-//
-//?>
-<!---->
+
+if(isset($_POST['deletePos'])) {
+
+    $id = $_GET['id'];
+
+    $db_host = 'localhost'; // Server Name
+    $db_user = 'root'; // Username
+    $db_pass = ''; // Password
+    $db_name = 'megasky'; // Database Name
+
+    $conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+    if (!$conn) {
+        die ('Failed to connect to MySQL: ' . mysqli_connect_error());
+    }
+
+    $sql = "DELETE FROM t_slide WHERE ID_slide = '$id'";
+
+    $query = mysqli_query($conn, $sql);
+
+    if (!$query) {
+        die ('SQL Error: ' . mysqli_error($conn));
+    }
+    echo "Delete successfull";
+
+}
+
+
+?>
+
+<a href="../pages/cms_pages/slide_cms.php">Return</a>
+
+
 
 
 

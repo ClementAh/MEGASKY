@@ -37,6 +37,9 @@
             <li>
                 <a class="nav-link" href="../chat/">Chat</a>
             </li>
+            <li>
+                <a class="nav-link" href="./slide_cms.php">Slide</a>
+            </li>
 
 
         </ul>
@@ -129,7 +132,6 @@ while ($row = mysqli_fetch_array($query)) {
 
 }
 ?>
-
 
 
 
