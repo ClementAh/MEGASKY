@@ -13,8 +13,8 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#"><img src ="../../assets/img/megasky.png" width="100px", height="35px"></a>
+<nav class="navCms navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"><img src ="../../assets/img/megasky.png" width="100px" , height="35px"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -24,29 +24,29 @@
                 <a class="nav-link" href="../../index.php">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../cms_pages/pos_pago_cms.php">Pos Pago</a>
+                <a class="nav-link" href="pos_pago_cms.php">Pos Pago</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../cms_pages/pre_pago_cms.php">Pre Pago</a>
+                <a class="nav-link" href="pre_pago_cms.php">Pre Pago</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../cms_pages/banda_larga_cms.php">Banda Larga</a>
+                <a class="nav-link" href="banda_larga_cms.php">Banda Larga</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../cms_pages/message_cms.php"> Message</a>
+                <a class="nav-link" href="message_cms.php">Message</a>
             </li>
             <li>
-                <a class="nav-link" href="./chat.php">Chat</a>
+                <a class="nav-link" href="chat.php">Chat</a>
             </li>
             <li>
-                <a class="nav-link" href="./slide_cms.php">Slide</a>
+                <a class="nav-link" href="slide_cms.php">Slide</a>
             </li>
-
-
+            <li>
+                <a class="nav-link" href="packages.php"">Package</a>
+            </li>
         </ul>
     </div>
 </nav>
-
 
 <script src="https://uhchat.net/code.php?f=230dc2"></script>
 

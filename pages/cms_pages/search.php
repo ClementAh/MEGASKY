@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CMS MESSAGE</title>
+    <title>CMS SEARCH</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="../../assets/css/styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -51,6 +51,18 @@
         </ul>
     </div>
 </nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12"style="text-align: center;">
+            <form method="post" action="search.php">
+                <input type="text" placeholder="Search" name="recherche2">
+                <input type="submit" name="search" value="Search">
+            </form>
+
+        </div>
+    </div>
+</div>
+
 
 
 <?php
@@ -59,6 +71,7 @@
 if(isset($_POST['search'])) {
     $recherche = $_POST['search'];
     $recherche2 = $_POST['recherche2'];
+
 }
 
 
@@ -88,6 +101,9 @@ while ($row = mysqli_fetch_array($query)) {
     "."<div class=\"titleCat\">
     "."<p>".$row['name']."</p>
     "."</div>
+    
+
+    
     
    
 

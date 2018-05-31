@@ -44,6 +44,9 @@
             <li>
                 <a class="nav-link" href="packages.php">Package</a>
             </li>
+            <li>
+                <a class="nav-link" href="packages.php"">Package</a>
+            </li>
 
 
 
