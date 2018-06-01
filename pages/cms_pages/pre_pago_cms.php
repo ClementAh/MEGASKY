@@ -49,114 +49,16 @@
     </div>
 </nav>
 
-<?php
+<?php include "./pre_pago_loop.php" ?>
 
-$db_host = 'localhost'; // Server Name
-$db_user = 'root'; // Username
-$db_pass = ''; // Password
-$db_name = 'megasky'; // Database Name
-
-$conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
-if (!$conn) {
-    die ('Failed to connect to MySQL: ' . mysqli_connect_error());
-}
-
-$sql = "SELECT * FROM t_pre_pago";
-
-$query = mysqli_query($conn, $sql);
-
-if (!$query) {
-    die ('SQL Error: ' . mysqli_error($conn));
-}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
 
-while ($row = mysqli_fetch_array($query)) {
+</body>
+</html>
 
-
-    echo
-    ("<div class=\"card\" style=\"width: 20rem;\"> 
-
-    <div class=\"card-header\">
-        <ul class=\"nav justify-content-center\">
-        
-             <li class=\"nav-item\">
-                 <a class=\"nav-link\" href=\"../create_pre_pago.php?id=".$row['ID_pre_pago']."\">Create</a>
-             </li>
-             
-             <li class=\"nav-item\">
-                 <a class=\"nav-link\" href=\"../update_pre_pago.php?id=".$row['ID_pre_pago']."\">Update</a>
-             </li>
-             
-             <li class=\"nav-item\">
-                 <a class=\"nav-link\" href=\"../delete_query.php?id=".$row['ID_pre_pago']."&amp;name=".$row['t_name']."\">Delete</a>
-             </li>
-             
-         </ul>
-   </div> 
-      
-    "."<div class=\"titleCat\">
-    "."<p>".$row['t_name']."</p>
-    "."</div>
-
-    "."<div class=\"card-body col-md-12\">"."
-        "."<div class=\"container\">
-             "."<div class=\"row\">
-             
-                "."<div class=\"spotPrice col-md-12\">
-                    "."<p>A partir de</p><span class=\"price2\">R$ ".$row['t_price']."</span><span class=\"afterPrince\">/mês</span>
-                "."</div>
-                
-             "."</div>
-        "."<div class=\"row\">
-     
-      
-        "."<div class=\"condition col-md-12\">
-            "."<p>".$row['t_description']."</p>
-        "."</div>
-    
-    "."</div>
-    
-    </div>
-    
-    "."</div>
-    "."<div class=\"container\">
-    "."<div class=\"row\">
-    "."<div class=\"col-md-6\">
-    "."<a class=\"button btn btn-primary\" href=\"./detalhes_pre_pago_cms.php?id=".$row['ID_pre_pago']."\">DETALHES</a>
-    "."</div>
-    "."<div class=\"col-md-6\">
-    "."<a href=\"#\" class=\"btn btn-primary\">ASSINA</a>
-    "."</div>
-    "."</div>
-    "."</div>
-    "."</div>
-    "."</div>");
-
-
-}
-?>
-
-
-
-
-<script>
-    window.fbAsyncInit = function() {
-        FB.init({
-            appId            : 'your-app-id',
-            autoLogAppEvents : true,
-            xfbml            : true,
-            version          : 'v3.0'
-        });
-    };
-
-    (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-</script>
 
 
 
