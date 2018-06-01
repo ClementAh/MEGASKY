@@ -40,6 +40,11 @@
             <li>
                 <a class="nav-link" href="./slide_cms.php">Slide</a>
             </li>
+            <li>
+                <a class="nav-link" href="packages.php">Package</a>
+            </li>
+
+
 
 
         </ul>
